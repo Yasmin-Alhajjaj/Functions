@@ -1,393 +1,136 @@
 /*
 1
-Write a function named tellFortune that:
-takes 4 arguments: number of children,
-partner's name, geographic location, job title.
-outputs your fortune to the screen like so:
-"You will be a X in Y, and married to Z with N kids."
-
-Ex: tellFortune('software engineer', 'Jordan', 'Alice', 3);
-=> "You will be a software engineer in Jordan, and married to Alice with 3 kids."
+Create a function called sum 
+that takes a single parameter n, 
+and return the sum of all integers up to n starting from 0
+​
+Ex: sum(2); => 2 + 1 + 0 => 3 
+Ex: sum(5); => 5 + 4 + 3 + 2 + 1 + 0 => 15
+​
 */
-
-
+function sum(n) {
+  if (n==0){
+    return 0;
+  }
+  return n+sum(n-1);
+  // your code here 
+}
+console.log(sum(4));
+​
 /*
 2
-Write a function named calculateDogAge that:
-takes 1 argument: your puppy's age.
-calculates your dog's age based on the conversion
-rate of 1 human year to 7 dog years.
-outputs the result to the screen like so:
-"Your doggie is NN years old in dog years!"
-
-Ex: calculateDogAge(1);
-=> "Your doggie is 7 years old in dog years!"
+Create a function called factorial 
+that takes a single parameter n, 
+and return the product of all integers up to n starting from 1
+​
+Ex: factorial(2); => 2 * 1 => 6 
+Ex: factorial(4); => 4 * 3 * 2 * 1 => 24 
+​
 */
-
-
+function factorial(n) {
+​
+  if(n===1){
+​
+    return 1;
+  
+  }
+return n =n* factorial(n-1);
+ 
+}
+console.log(factorial(4))
+​
 /*
 3
-Write a function named calculateSupply that:
-takes 2 arguments: age, amount per day.
-calculates the amount consumed for rest of the life (based on a constant max age 100).
-outputs the result to the screen like so:
-"You will need NN to last you until the ripe old age of X"
-
-Ex: calculateSupply(30, 3);
-=> 'You will need 76650 cups of tea to last you until the ripe old age of 100;
+Create a function called repeatStr
+that takes 2 parameters string and number,
+and return the string number time with space
+​
+Ex: repeatStr("to",2); => "to to"
+Ex: repeatStr("to",4); => "to to to to"
 */
-
-
+function repeatStr(x,y){
+​
+if (y===0){
+  return"";
+}
+return x+ repeatStr(x,y-1)
+ 
+}
+​
+console.log(repeatStr("mohd ",5))
+​
 /*
 4
-Write a function called greet that:
-takes 1 argument: name.
-and it will return hello + name
-
-Ex: greet("Jouza")
-=> "Hello Jouza"
+Create a function called fibon
+that takes 1 parameter a number,
+and return the fibonacci for this number
+​
+Ex: fibon(7); => 21
+Ex: fibon(2); => 2
+Ex: fibon(1); => 1
+Ex: fibon(0); => 1
+​
+fib(n): 1 1 2 3 5 8 13 21
+        | | | | | |  |  |
+n:      0 1 2 3 4 5  6  7
 */
-
-
+function ficccccbon(x){
+​
+  if(x===1||x===0){
+    return 1;
+  }
+return ficccccbon(x-1)+ficccccbon(x-2);
+​
+}
+console.log(ficccccbon(5));
+​
+​
+​
 /*
 5
-what is the error:
-function double(cat) {
-  return 2 * x;
-}
-
-function double(7) {
-  return 2 * 7;
-}
-
-function double('7') {
-  return 2 * 'x';
-}
+Create a function called sum2
+that take two parameter
+and will return the sumation from the first number to the second number
+Ex: sum2(4, 5); => 4 + 5 => 9
+Ex: sum2(3, 6); => 3 + 4 + 5 + 6 => 18
 */
-
-
-
+function sum2(x,y){
+​
+if(y=(x+1))
+{
+  return x+y;
+}
+}
+console.log(sum2(6,7))
+​
 /*
 6
-fix these functions:
-func double1(x {
-  return 2 * x ;
-}
-
-functiondouble2 x)
-return 2 * x;
-}
-
-function (x) double3 {
-  return 2 * x;
-
+Create a function called repeatStr2
+that takes 2 string parameters,
+and return the first string number time
+(of the lenght of the secend string) with space betweeen it
+Important: the stop condition should be [somthing=== 0]
+Ex: repeatStr2("ro","cc"); => "ro ro"
+Ex: repeatStr2("ro","fff"); => "ro ro ro"
 */
-
-
+​
+​
 /*
 7
-Write a function called cube that:
-accept 1 parameter and calculate the cube of this number
-
-Ex: cube(4)
-=> 64
+Create a function called multiOf
+that takes 3 parameters,
+and return the first number mutiple by
+the second one ^ the third one
+Ex: multiOf(4,3,10); => 4000
+Ex: multiOf(6,2,4); => 96
 */
-
-
+​
+​
 /*
 8
-Write a function called multiply that:
-accept 2 parameters and calculate the multiply of these 2 numbers
-
-Ex: multiply(3,4)
-=> 12
-Ex: multiply(5,4)
-=> 20
-*/
-
-
-/*
-9
-Write a function called canIGetADrivingLicense that:
-accept 1 parameter represent the age
-and if the age greater than or equal to 20 return "yes you can"
-otherwise return "please come back after X years to get one"
-
-Ex: canIGetADrivingLicense(21)
-=> "yes you can"
-
-Ex: canIGetADrivingLicense(17)
-=> "please come back after 3 years to get one"
-
-Ex: canIGetADrivingLicense(20)
-=> "yes you can"
-
-*/
-
-
-/*
-10
-Write a function called sameLength
-that accepts two strings as arguments,
-and returns true if those strings have the same length, and false otherwise.
-
-**hint: how we can know string length   Ex: : "tree".length   => 4
-
-Ex: sameLength("tree","clue")
-=> true
-
-Ex: sameLength("tree","car")
-=> false
-*/
-
-/*
-11
-Write a function called largerNubmer
-that accept two numbers as arguments,
-and return the first larger numbers
-
-Ex: largerNubmer(5,6)
-=> 6
-
-Ex: largerNubmer(5,3)
-=> 5
-*/
-
-
-/*
-12
-Write a function called smallerNubmer
-that accept three numbers as arguments,
-and return the first smaller number
-
-Ex: smallerNubmer(8,6,7)
-=> 6
-
-Ex: smallerNubmer(5,99,34)
-=> 5
-
-Ex: smallerNubmer(5,99,3)
-=> 3
-
-Ex: smallerNubmer(5,3,3)
-=> 3
-
-*/
-
-/*
-13
-Write a function called shorterString
-that accept five string as an arguments,
-and return the first shorter string
-
-Ex: shorterString("air","school","car","by","github")
-=> by
-
-Ex: shorterString("air","tr","car","by","github")
-=> tr
-
-Ex: shorterString("by","tr","car","air","github")
-=> by
-
-Ex: shorterString("air","by","car","school","github")
-=> by
-
-Ex: shorterString("air","tr","by","car","github")
-=> by
-
-Ex: shorterString("air","tr","car","github","by")
-=> by
-
-*/
-
-/*
-14
-Write a function called longerString
-that accept four string as an arguments,
-and return the first longer string
-
-Ex: longerString("air","school","car","github")
-=> school
-
-Ex: longerString("air","schoo","car","github")
-=> github
-
-try all the cases (change the order of the longestString)
-*/
-
-/*
-15
-Write a function called isEven
-that accept 1 argument as a number,
-and return true if this number is even
-and false if this number is odd
-
-Ex: isEven(1)
-=> false
-Ex: isEven(2)
-=> true
-
-*/
-
-
-/*
-16
-Write a function called isOdd
-that accept 1 argument as a number,
-and return true if this number is Odd
-and false if this number is Even
-
-Ex: isOdd(4)
-=> false
-Ex: isOdd(5)
-=> true
-
-*/
-
-
-/*
-17
-Write a function called positive
-that accept 1 argument as a number,
-and return the positive version of the number passed
-
-Ex: positive(4)
-=> 4
-Ex: positive(-5)
-=> 5
-
-*/
-
-
-/*
-18
-Write a function called fullName
-that accept two parameters, firstName and lastName,
-and returns the firstName and lastName concatenated
-together with a space in between.
-
-Ex: fullName("Mohammad","Jouza")
-=> "Mohammad Jouza"
-Ex: fullName("Alex", "Mercer")
-=> "Alex Mercer"
-*/
-
-
-/*
-19
-Write a function called average
-that takes five numbers as inputs
-and returns the average of those numbers.
-
-Ex: average(1,2,3,4,5)
-=> 3
-
-Ex: average(5,7,9,3,5)
-=> 5.8
-
-*/
-
-
-/*
-20
-Write a function called randomNumber
-that didnt takes any parameter
-and returns a random number between 0-1
-** hint: you can seacrh using MDN
-
-Ex: randomNumber()
-=> 0.2278
-
-Ex: randomNumber()
-=> 0.475
-
-*/
-
-/*
-21
-Write a function called randomBetweenNumbers
-that takes 2 parameters
-and returns a random number between them
-** hint: you can seacrh using MDN
-
-Ex: randomBetweenNumbers(1,8)
-=> 7.5412
-
-Ex: randomBetweenNumbers(3,100)
-=> 23
-
-*/
-
-
-/*
-22
-Write a function called scoreInUniversty
-that takes 1 parameters
-and returns the alpabet in the unevirsty
-A => 95-100
-B => 85-94
-C => 70-84
-D=> 50-69
-F=> 0-49
-
-Ex: scoreInUniversty(96)
-=> "A"
-
-Ex: scoreInUniversty(3)
-=> "F"
-
-Ex: scoreInUniversty(71)
-=> "C"
-*/
-
-
-/*
-23
-Write a function called counter
-that will returns a number bigger
-than the one that returnd before
-and start from 0
-
-Ex: counter()
-=> 1
-
-Ex: counter()
-=> 2
-
-Ex: counter()
-=> 3
-
-*/
-
-
-/*
-24
-Write a function called resetCounter
-that will reset the previuos function
-and return the number before reset and
-a string say that the counter reset
-
-Ex: counter()
-=> 1
-
-Ex: counter()
-=> 2
-
-Ex: counter()
-=> 3
-
-Ex: resetCounter()
-=> 3 and the counter reset now
-
-Ex: counter()
-=> 1
-
-Ex: counter()
-=> 2
-
-Ex: resetCounter()
-=> 2 and the counter reset now
-
-Ex: counter()
-=> 1
+Create a function called muti2
+that take two parameter
+and will return the multiplication from the first number to the second number
+Ex: muti2(4, 5); => 4 * 5 => 20
+Ex: muti2(3, 6); => 3 * 4 * 5 * 6 => 360
 */
